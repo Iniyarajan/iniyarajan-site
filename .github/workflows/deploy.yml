@@ -1,6 +1,6 @@
 name: Deploy to VPS
 
-# Push to main → SSH to porter-vps and run the deploy.
+# Push to main → SSH to the VPS and run the deploy.
 # The SSH key is locked to a forced command on the box (authorized_keys),
 # so it can ONLY run `vps-deploy.sh update iniyarajan.dev` — nothing else.
 
@@ -17,7 +17,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger deploy on porter-vps
+      - name: Trigger deploy on VPS
         env:
           SSH_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
           KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}

@@ -1,26 +1,23 @@
 # iniyarajan.dev
 
-Personal portfolio site for Iniyarajan — full-stack & AI engineer.
+Personal portfolio site for **Iniyarajan** — senior iOS & mobile engineer.
 
-Single-file static site (`index.html`), no build step. Hand-coded HTML/CSS/JS.
+Live at **[iniyarajan.dev](https://iniyarajan.dev)**.
 
-## Hosting
+## About
 
-Served by nginx on the VPS (`porter-vps`, `148.251.229.73`) from
-`/www/wwwroot/iniyarajan.dev`, behind Cloudflare DNS (grey/DNS-only) with a
-Let's Encrypt cert.
+Single-file static site (`index.html`) — hand-coded HTML, CSS and a touch of JS,
+no framework and no build step. Dark-first design, Space Grotesk + Inter +
+JetBrains Mono, with a progressive-enhancement scroll reveal (the page renders
+fully without JavaScript).
 
 ## Deploy
 
-The docroot on the box is a clone of this repo. Ship changes with:
-
-```sh
-git push                 # push to main
-ssh porter-vps '/root/vps-deploy/vps-deploy.sh update iniyarajan.dev'
-```
-
-`update` for a `static` site = `git pull` in the docroot (atomic, no build).
+Self-hosted behind nginx + Cloudflare, with a **GitHub Actions push-to-deploy**
+pipeline ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) —
+push to `main` and it ships automatically. Host and credentials live in
+repository/CI secrets, never in the source.
 
 ## Local preview
 
-Open `index.html` in a browser, or render a screenshot with headless Chrome.
+Open `index.html` in any browser.
