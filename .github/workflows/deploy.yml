@@ -1,0 +1,37 @@
+name: Deploy to VPS
+
+# Push to main → SSH to porter-vps and run the deploy.
+# The SSH key is locked to a forced command on the box (authorized_keys),
+# so it can ONLY run `vps-deploy.sh update iniyarajan.dev` — nothing else.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deploy on porter-vps
+        env:
+          SSH_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          echo "Deploying iniyarajan.dev …"
+          ssh -i ~/.ssh/deploy_key \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o IdentitiesOnly=yes \
+              -o StrictHostKeyChecking=yes \
+              "$VPS_USER@$VPS_HOST" deploy
