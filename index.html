@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Iniyarajan — Full-stack & AI Engineer</title>
-<meta name="description" content="Iniyarajan is an independent full-stack and AI engineer in Coimbatore, India. I design, ship and support web, mobile and AI products end to end — from first commit to live, paying customers.">
+<title>Iniyarajan — Senior iOS & Mobile Engineer</title>
+<meta name="description" content="Iniyarajan is a senior iOS & mobile engineer in Coimbatore, India — a decade of Swift & SwiftUI, leading teams on apps for enterprise clients, and shipping complete products (mobile, backend, AI) end to end.">
 <link rel="canonical" href="https://iniyarajan.dev/">
-<meta property="og:title" content="Iniyarajan — Full-stack & AI Engineer">
-<meta property="og:description" content="Independent engineer shipping web, mobile and AI products end to end — ChapterAce, live billing software for real businesses, and WhatsApp AI agents.">
+<meta property="og:title" content="Iniyarajan — Senior iOS & Mobile Engineer">
+<meta property="og:description" content="A decade of iOS & mobile engineering — Swift, SwiftUI, team lead for enterprise apps — plus full products (mobile, backend, AI) shipped solo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://iniyarajan.dev/">
 <meta name="theme-color" content="#0B0D10">
@@ -49,7 +49,6 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
 
-  /* ---- ambient background ---- */
   body::before{
     content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
     background:
@@ -57,7 +56,6 @@
       radial-gradient(700px 500px at 0% 12%, rgba(16,185,129,.08), transparent 55%);
   }
 
-  /* ---- nav ---- */
   nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);
     background:color-mix(in srgb, var(--bg) 78%, transparent);
     border-bottom:1px solid var(--line)}
@@ -72,7 +70,6 @@
   .navlinks .hire{color:var(--accent);font-weight:600}
   @media(max-width:620px){.navlinks a:not(.hire){display:none}}
 
-  /* ---- hero ---- */
   header.hero{padding:72px 0 40px}
   .avail{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
     font-size:12px;font-weight:500;color:var(--fg2);letter-spacing:.02em;
@@ -82,11 +79,11 @@
     border:1.5px solid var(--accent);animation:ping 2.4s ease-out infinite;opacity:0}
   @keyframes ping{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.9);opacity:0}}
   h1{font-family:var(--display);font-weight:700;letter-spacing:-.035em;
-    font-size:clamp(34px,6.4vw,62px);line-height:1.04;margin:0 0 22px;max-width:16ch;
+    font-size:clamp(33px,6vw,60px);line-height:1.05;margin:0 0 22px;max-width:17ch;
     text-wrap:balance}
   h1 .grad{background:linear-gradient(120deg,var(--accent),#6EE7B7 55%,var(--accent));
     -webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{font-size:clamp(16px,1.9vw,20px);color:var(--fg2);max-width:60ch;margin:0 0 32px}
+  .lead{font-size:clamp(16px,1.9vw,20px);color:var(--fg2);max-width:62ch;margin:0 0 32px}
   .lead b{color:var(--fg);font-weight:600}
   .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);
@@ -97,51 +94,50 @@
   .btn-ghost{border-color:var(--line2);color:var(--fg)}
   .btn-ghost:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
 
-  /* ---- metrics strip ---- */
   .metrics{display:flex;gap:40px;flex-wrap:wrap;margin-top:52px;
     padding-top:30px;border-top:1px solid var(--line)}
   .metric .n{font-family:var(--display);font-weight:700;font-size:30px;letter-spacing:-.02em;color:var(--fg)}
-  .metric .l{font-size:13.5px;color:var(--fg3);margin-top:3px}
+  .metric .l{font-size:13.5px;color:var(--fg3);margin-top:3px;max-width:22ch}
 
-  /* ---- section scaffolding ---- */
-  section{padding:66px 0}
+  section{padding:60px 0}
   .eyebrow{font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.14em;
     text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent);display:inline-block}
   h2{font-family:var(--display);font-weight:600;letter-spacing:-.02em;
     font-size:clamp(25px,3.6vw,34px);margin:0 0 14px;line-height:1.12}
-  .sec-lead{color:var(--fg2);max-width:62ch;font-size:16.5px;margin:0 0 38px}
+  .sec-lead{color:var(--fg2);max-width:62ch;font-size:16.5px;margin:0 0 36px}
 
-  /* ---- work cards ---- */
-  .work{display:grid;gap:18px}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;
     padding:28px;transition:transform .18s ease, border-color .18s ease;position:relative;overflow:hidden}
   .card:hover{transform:translateY(-3px);border-color:var(--line2)}
-  .card.feat{background:
-      linear-gradient(180deg, var(--accentSoft), transparent 40%), var(--elev);
-    border-color:color-mix(in srgb,var(--accent) 30%, var(--line))}
-  .card .top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+  .card.feat{background:linear-gradient(180deg, var(--accentSoft), transparent 42%), var(--elev);
+    border-color:color-mix(in srgb,var(--accent) 30%, var(--line));margin-bottom:28px}
+  .card .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
   .tag{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.03em;
     padding:5px 11px;border-radius:999px;border:1px solid var(--line2);color:var(--fg2)}
   .tag.live{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%, transparent);
     background:var(--accentSoft)}
   .card h3{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em;margin:0 0 9px}
-  .card p{color:var(--fg2);font-size:15px;margin:0 0 18px}
+  .card p{color:var(--fg2);font-size:15px;margin:0 0 16px}
   .card .role{font-size:13.5px;color:var(--fg3);margin:0 0 16px}
   .card .role b{color:var(--fg2);font-weight:600}
   .stack{display:flex;gap:7px;flex-wrap:wrap}
   .chip{font-family:var(--mono);font-size:12px;color:var(--fg2);
     background:var(--bg2);border:1px solid var(--line);border-radius:7px;padding:4px 9px}
   .card .link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);
-    font-weight:600;font-size:14px;margin-top:18px}
+    font-weight:600;font-size:14px;margin-top:16px}
   .card .link:hover{gap:9px}
   @media(min-width:760px){
-    .work{grid-template-columns:1fr 1fr}
-    .card.feat{grid-column:1 / -1}
-    .card.feat .inner{display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center}
+    .card.feat .inner{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;align-items:center}
   }
 
-  /* ---- services ---- */
+  .indie-label{font-size:14.5px;color:var(--fg3);margin:0 0 18px}
+  .indie-label b{color:var(--fg2);font-weight:600}
+  .work3{display:grid;gap:18px}
+  @media(min-width:760px){.work3{grid-template-columns:repeat(3,1fr)}}
+  .work3 .card{padding:24px}
+  .work3 .card h3{font-size:18.5px}
+
   .svc{display:grid;gap:18px}
   @media(min-width:760px){.svc{grid-template-columns:repeat(3,1fr)}}
   .svc .card{padding:26px}
@@ -150,7 +146,6 @@
   .svc h3{font-size:18px;margin:0 0 8px}
   .svc p{font-size:14.5px;margin:0}
 
-  /* ---- about + stack ---- */
   .about-grid{display:grid;gap:34px}
   @media(min-width:820px){.about-grid{grid-template-columns:1.1fr .9fr}}
   .about p{color:var(--fg2);font-size:16.5px;margin:0 0 18px}
@@ -161,12 +156,11 @@
   .stackbox h4:not(:first-child){margin-top:22px}
   .stackbox .row{display:flex;gap:8px;flex-wrap:wrap}
 
-  /* ---- contact ---- */
   .contact{text-align:center;padding:84px 0}
   .contact .eyebrow{justify-content:center}
   .contact .eyebrow::before{display:none}
   .contact h2{font-size:clamp(28px,4.4vw,42px);max-width:18ch;margin:0 auto 16px}
-  .contact p{color:var(--fg2);font-size:17px;max-width:52ch;margin:0 auto 30px}
+  .contact p{color:var(--fg2);font-size:17px;max-width:54ch;margin:0 auto 30px}
   .channels{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
   .chan{display:inline-flex;align-items:center;gap:10px;background:var(--surface);
     border:1px solid var(--line2);border-radius:12px;padding:14px 22px;font-weight:600;font-size:15px;
@@ -179,7 +173,7 @@
     color:var(--fg3);font-size:13.5px;align-items:center}
   footer .brand{font-size:15px}
 
-  /* ---- reveal (progressive enhancement: hidden only when JS is active) ---- */
+  .reveal{opacity:1}
   .js .reveal{opacity:0;translate:0 18px;transition:opacity .6s ease, translate .6s ease}
   .js .reveal.in{opacity:1;translate:0 0}
   @media(prefers-reduced-motion:reduce){
@@ -197,104 +191,108 @@
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a class="hire" href="#contact">Work with me →</a>
+    <a class="hire" href="#contact">Get in touch →</a>
   </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <div class="avail"><span class="pulse"></span>Available for freelance &amp; contract work</div>
-  <h1>I build and ship software that goes <span class="grad">live with real customers.</span></h1>
-  <p class="lead">I'm an independent <b>full-stack &amp; AI engineer</b> in Coimbatore, India. Solo, end to end — from the first commit to production, paying users and the support that keeps it running. Web, mobile, and AI, built for the way people actually use it.</p>
+  <div class="avail"><span class="pulse"></span>Open to select freelance &amp; consulting projects</div>
+  <h1>I've shipped iOS apps for a decade — and I build <span class="grad">the whole product</span> around them.</h1>
+  <p class="lead">I'm a <b>senior iOS &amp; mobile engineer</b> in Coimbatore, India — about ten years of Swift &amp; SwiftUI, leading teams on apps that ship to real users at enterprise scale. On my own, I build complete products end to end: <b>mobile, backend and AI</b>.</p>
   <div class="cta">
     <a class="btn btn-primary" href="#contact">Work with me</a>
     <a class="btn btn-ghost" href="#work">See the work ↓</a>
   </div>
 
   <div class="metrics">
-    <div class="metric"><div class="n">2</div><div class="l">businesses running on software I built</div></div>
-    <div class="metric"><div class="n">3</div><div class="l">products shipped to production</div></div>
-    <div class="metric"><div class="n">Solo</div><div class="l">design → build → deploy → support</div></div>
+    <div class="metric"><div class="n">~10 yrs</div><div class="l">building iOS &amp; mobile apps</div></div>
+    <div class="metric"><div class="n">15+</div><div class="l">apps shipped to production</div></div>
+    <div class="metric"><div class="n">Solo</div><div class="l">own products — design to deploy</div></div>
   </div>
 </div></header>
 
 <section id="work"><div class="wrap">
   <div class="eyebrow reveal">Selected work</div>
-  <h2 class="reveal">Things I've built and still run.</h2>
-  <p class="sec-lead reveal">Not demos — real products with real users. I own them end to end, which means I design the thing, write it, deploy it, and keep it alive when customers depend on it.</p>
+  <h2 class="reveal">A decade of apps — and products I built end to end.</h2>
+  <p class="sec-lead reveal">Enterprise iOS by day, my own products by night. Both ship to real users, and I own them the whole way through.</p>
 
-  <div class="work">
-
-    <article class="card feat reveal">
-      <div class="inner">
-        <div>
-          <div class="top">
-            <span class="tag live">● Live · in production</span>
-            <span class="tag">2 paying businesses</span>
-          </div>
-          <h3>Transport &amp; Parcel Billing Platform</h3>
-          <p>A complete billing, reporting and operations system for intra-city transport businesses — bills, bookings, masters, expenses, reports and exports. Two real companies run their daily billing on it. I took a legacy CodeIgniter app and did a faithful, data-safe migration to a modern, maintainable Laravel stack without breaking a single live workflow.</p>
-          <p class="role"><b>My role:</b> Sole engineer — architecture, faithful port plan, build, UAT, deploy, and ongoing support.</p>
+  <article class="card feat reveal">
+    <div class="inner">
+      <div>
+        <div class="top">
+          <span class="tag live">● 10+ years · iOS</span>
+          <span class="tag">Team lead</span>
         </div>
-        <div>
-          <div class="stack">
-            <span class="chip">Laravel</span><span class="chip">PHP 8.4</span>
-            <span class="chip">MySQL</span><span class="chip">Blade</span>
-            <span class="chip">mPDF</span><span class="chip">Legacy migration</span>
-          </div>
+        <h3>Enterprise iOS, at scale</h3>
+        <p>I lead iOS development at a global IT services firm — managing a team of five across architecture, delivery and quality. Recent Swift &amp; SwiftUI work: a guest booking experience for a major cruise line, the customer app dashboard for a US telecom, and an enterprise safety platform with biometric face-detection check-in, shipped to production.</p>
+        <p class="role"><b>My role:</b> Projects Manager &amp; iOS lead — requirements, architecture, estimation, delivery and QA across concurrent client projects.</p>
+      </div>
+      <div>
+        <div class="stack">
+          <span class="chip">Swift</span><span class="chip">SwiftUI</span>
+          <span class="chip">RxSwift</span><span class="chip">Objective-C</span>
+          <span class="chip">ML Kit</span><span class="chip">Xcode</span>
         </div>
       </div>
-    </article>
+    </div>
+  </article>
 
+  <p class="indie-label reveal">On the side, I <b>design, build, deploy and support my own products</b> — alone, end to end:</p>
+
+  <div class="work3">
     <article class="card reveal">
-      <div class="top">
-        <span class="tag live">● Live beta</span>
-      </div>
+      <div class="top"><span class="tag live">● Live beta</span></div>
       <h3>ChapterAce</h3>
-      <p>An AI exam-prep app for CBSE &amp; Tamil Nadu board students. Pick any chapter and get a fresh, board-pattern question paper every time — marked the way a board examiner marks it. Covers English and Tamil medium, built for low-end Android and real Indian classrooms.</p>
-      <p class="role"><b>Stack:</b> Expo / React Native · Node + Hono · BullMQ worker · Gemini · Firebase</p>
+      <p>An AI exam-prep app for CBSE &amp; Tamil Nadu board students — a fresh, board-pattern paper for any chapter, marked like an examiner. English &amp; Tamil medium, built for low-end Android.</p>
       <div class="stack">
         <span class="chip">React Native</span><span class="chip">Node</span>
-        <span class="chip">Gemini / LLM</span><span class="chip">Firebase</span>
+        <span class="chip">Gemini</span><span class="chip">Firebase</span>
       </div>
-      <a class="link" href="https://chapterace.com" target="_blank" rel="noopener">Visit chapterace.com →</a>
+      <a class="link" href="https://chapterace.com" target="_blank" rel="noopener">chapterace.com →</a>
     </article>
 
     <article class="card reveal">
-      <div class="top">
-        <span class="tag">AI agents</span>
-      </div>
-      <h3>WhatsApp AI Assistants</h3>
-      <p>Conversational agents that handle real customer chats on WhatsApp — a parcel-enquiry assistant for a transport business and a product-recommendation advisor. Grounded, tool-using, and cost-optimised so an LLM feature doesn't blow the budget.</p>
-      <p class="role"><b>Stack:</b> Node · Anthropic / Claude SDK · open-weight models · WhatsApp API</p>
+      <div class="top"><span class="tag live">● 2 paying businesses</span></div>
+      <h3>Billing Platform</h3>
+      <p>A transport &amp; parcel billing system two real companies run their daily billing on. I did a faithful, data-safe migration of a legacy app to a modern Laravel stack — no downtime, no lost workflows.</p>
       <div class="stack">
-        <span class="chip">Claude SDK</span><span class="chip">Agents / tools</span>
+        <span class="chip">Laravel</span><span class="chip">PHP</span>
+        <span class="chip">MySQL</span><span class="chip">Migration</span>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="top"><span class="tag">AI agents</span></div>
+      <h3>WhatsApp Assistants</h3>
+      <p>Conversational agents handling real customer chats on WhatsApp — parcel enquiry, product advice. Grounded, tool-using and cost-controlled so an LLM feature doesn't blow the budget.</p>
+      <div class="stack">
+        <span class="chip">Claude SDK</span><span class="chip">Agents</span>
         <span class="chip">RAG</span><span class="chip">Node</span>
       </div>
     </article>
-
   </div>
 </div></section>
 
 <section id="services" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
   <div class="eyebrow reveal">Work with me</div>
   <h2 class="reveal">How I can help your team.</h2>
-  <p class="sec-lead reveal">Whether you're starting from a blank repo or keeping a live system running, I plug in as a senior engineer who ships — and sticks around to support what I build.</p>
+  <p class="sec-lead reveal">A senior engineer who ships — whether you need an iOS app built, a mobile team led, or a whole product taken from idea to live.</p>
 
   <div class="svc">
     <article class="card reveal">
+      <div class="ic">📱</div>
+      <h3>iOS &amp; mobile apps</h3>
+      <p>Swift, SwiftUI, RxSwift, Objective-C. Ship a polished app to the App Store, or lead and strengthen an existing mobile team.</p>
+    </article>
+    <article class="card reveal">
       <div class="ic">🚀</div>
-      <h3>Product build (0 → 1)</h3>
-      <p>Take an idea to a live, polished web or mobile app — solo, end to end. Thoughtful architecture, clean code, deployed and ready for real users.</p>
+      <h3>Full product build (0 → 1)</h3>
+      <p>Not just the app — the backend, infrastructure and AI too. Take an idea to a live, supported product, solo and end to end.</p>
     </article>
     <article class="card reveal">
       <div class="ic">🤖</div>
-      <h3>AI &amp; LLM features</h3>
-      <p>Add AI that actually works in production: chat assistants, agents, document/RAG pipelines, generation — grounded, reliable, and cost-controlled.</p>
-    </article>
-    <article class="card reveal">
-      <div class="ic">🛠️</div>
-      <h3>Modernise &amp; maintain</h3>
-      <p>Migrate legacy apps to a modern stack without breaking what works, harden security, and keep live systems running smoothly.</p>
+      <h3>AI features &amp; agents</h3>
+      <p>Add AI that works in production: chat assistants, agents, document/RAG pipelines, on-device ML — grounded and cost-controlled.</p>
     </article>
   </div>
 </div></section>
@@ -303,29 +301,28 @@
   <div class="about-grid">
     <div class="about">
       <div class="eyebrow reveal">About</div>
-      <h2 class="reveal">An engineer who finishes — and supports what ships.</h2>
-      <p class="reveal">I build software the whole way through. Plenty of people can write a feature; I design the system, ship it to production, and I'm still there when a real customer hits a real problem on a Tuesday night. That's the part most portfolios skip, and it's the part that matters.</p>
-      <p class="reveal">I work solo and lean: managed infrastructure, low running costs, no over-engineering. I plan the architecture up front so projects don't stall halfway, and I build for the Indian market I know well — UPI, regional languages, education, and devices that aren't flagships.</p>
-      <p class="reveal">If you need someone who can own a product end to end and actually get it live, let's talk.</p>
+      <h2 class="reveal">A decade of shipping — and I still build the whole thing.</h2>
+      <p class="reveal">I've spent about ten years building iOS and mobile apps — most of it leading teams and owning delivery, for enterprise clients with real users and real deadlines. Swift and SwiftUI are home; I've shipped everything from guest-booking flows to biometric check-in.</p>
+      <p class="reveal">What's rarer: I also ship <b>complete products on my own</b> — the app, the backend, the infrastructure and the AI. I design it, build it, deploy it, and I'm still there when a customer hits a problem. That's the part most engineers skip, and it's the part that matters.</p>
+      <p class="reveal">I build with AI-assisted workflows every day, and I build for the Indian market I know well — regional languages, UPI, education, and devices that aren't flagships. If you need someone to lead mobile work or own a product start to finish, let's talk.</p>
     </div>
     <div class="stackbox reveal">
-      <h4>Core stack</h4>
+      <h4>Mobile</h4>
       <div class="row">
-        <span class="chip">React Native · Expo</span><span class="chip">Next.js</span>
-        <span class="chip">Node · Hono</span><span class="chip">TypeScript</span>
-        <span class="chip">Laravel · PHP</span><span class="chip">Python</span>
+        <span class="chip">Swift</span><span class="chip">SwiftUI</span>
+        <span class="chip">RxSwift</span><span class="chip">Objective-C</span>
+        <span class="chip">React Native</span><span class="chip">Flutter</span>
       </div>
-      <h4>Data &amp; infra</h4>
+      <h4>Backend &amp; data</h4>
       <div class="row">
-        <span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
-        <span class="chip">Firebase</span><span class="chip">Redis · BullMQ</span>
-        <span class="chip">Vercel</span><span class="chip">Docker · VPS</span>
+        <span class="chip">Node · Hono</span><span class="chip">Laravel</span>
+        <span class="chip">PostgreSQL</span><span class="chip">Firebase</span>
+        <span class="chip">SQLite</span><span class="chip">GraphQL</span>
       </div>
       <h4>AI</h4>
       <div class="row">
         <span class="chip">Anthropic / Claude</span><span class="chip">Gemini</span>
-        <span class="chip">Agents &amp; tools</span><span class="chip">RAG</span>
-        <span class="chip">Open-weight LLMs</span>
+        <span class="chip">ML Kit</span><span class="chip">Agents &amp; RAG</span>
       </div>
     </div>
   </div>
@@ -333,8 +330,8 @@
 
 <section class="contact" id="contact"><div class="wrap">
   <div class="eyebrow reveal">Get in touch</div>
-  <h2 class="reveal">Have something to build, or keep running?</h2>
-  <p class="reveal">Freelance projects, contract roles, or a quick question — I read everything. The fastest way to reach me is email.</p>
+  <h2 class="reveal">Have an app or a product to build?</h2>
+  <p class="reveal">Freelance projects, consulting, or a quick question — I read everything. The fastest way to reach me is email.</p>
   <div class="channels reveal">
     <a class="chan" href="mailto:iniyarajan86@gmail.com">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
@@ -349,12 +346,11 @@
 
 <footer><div class="wrap">
   <span class="brand"><span class="dot"></span>Iniyarajan</span>
-  <span>© <span id="yr"></span> Iniyarajan · Coimbatore, India · Built from scratch, no template.</span>
+  <span>© <span id="yr"></span> Iniyarajan S · Coimbatore, India · Built from scratch, no template.</span>
 </div></footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
-  // scroll reveal
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
